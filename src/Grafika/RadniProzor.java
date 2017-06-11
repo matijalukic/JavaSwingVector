@@ -5,6 +5,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * Created by Matija on 10 Jun 17.
@@ -16,6 +18,7 @@ public class RadniProzor extends JFrame {
     private JMenuItem newFile, save, saveAs, closeThis, quit, about;
     private JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
     private JPanel statusbar = new JPanel(new GridLayout(1,2));
+    private WorkPanel workPanel = new WorkPanel();
 
     private PopupDialog aboutDialog = new PopupDialog(this, "About", "© Матија Лукић 2017 ЕТФ Београд");
 
@@ -33,9 +36,21 @@ public class RadniProzor extends JFrame {
         makeMenu();
         // Fill toolbar
         makeTools();
-
+        // Fill canvas
+        makeCanvas();
         //  Fill status bar
         makeStatus();
+
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                super.mousePressed(e);
+            }
+            @Override
+            public void mouseReleased(MouseEvent e){
+                super.mouseReleased(e);
+            }
+        });
 
         setVisible(true);
     }
@@ -101,6 +116,20 @@ public class RadniProzor extends JFrame {
         statusbar.add(new JLabel("Desno", JLabel.RIGHT));
 
         add(statusbar, BorderLayout.SOUTH);
+    }
+
+    private void makeCanvas(){
+        Crtez novi = new Crtez();
+
+        Duz matija = new Duz(new Point(10,10), new Point(200,200), 3, Color.BLUE);
+        novi.addFigure(matija);
+
+        matija = new Duz(new Point(200,10), new Point(10, 200), 4, Color.RED);
+        novi.addFigure(matija);
+
+        workPanel.openNewDrawing(novi);
+
+        add(workPanel, BorderLayout.CENTER);
     }
 
 }
