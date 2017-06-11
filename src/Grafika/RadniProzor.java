@@ -20,6 +20,8 @@ public class RadniProzor extends JFrame {
     private JPanel statusbar = new JPanel(new GridLayout(1,2));
     private WorkPanel workPanel = new WorkPanel();
 
+    private Point start, end;
+
     private PopupDialog aboutDialog = new PopupDialog(this, "About", "© Матија Лукић 2017 ЕТФ Београд");
 
     public RadniProzor(JPanel prozor){
@@ -40,17 +42,6 @@ public class RadniProzor extends JFrame {
         makeCanvas();
         //  Fill status bar
         makeStatus();
-
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                super.mousePressed(e);
-            }
-            @Override
-            public void mouseReleased(MouseEvent e){
-                super.mouseReleased(e);
-            }
-        });
 
         setVisible(true);
     }
