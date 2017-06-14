@@ -12,5 +12,5 @@ public class Prozor extends JPanel {
         Prozor prozor = new Prozor();
         new RadniProzor(prozor);
 
-   }
+    }
 }

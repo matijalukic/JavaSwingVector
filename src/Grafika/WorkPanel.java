@@ -8,9 +8,9 @@ import java.awt.event.*;
  * Created by Matija on 12 Jun 17.
  */
 public class WorkPanel extends JPanel {
-    public Crtez drawing;
+    public static Crtez drawing = new Crtez(); // Crtez
+    public static Alat selectedTool = new CrtanjeLinija();
 
-    private Point start, end;
 
     public WorkPanel(){
 
@@ -20,15 +20,26 @@ public class WorkPanel extends JPanel {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 // Pravimo pocetnu tacku
-                start = new Point(e.getX(), e.getY());
+                selectedTool.mousePressed(e);
             }
             @Override
-            public void mouseReleased(MouseEvent e){
+            public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                end = new Point(e.getX(), e.getY());
-
-                drawing.addFigure(new Duz(start, end, 3, Color.BLUE));
+                selectedTool.mouseReleased(e);
                 repaint();
+            }
+        });
+
+        addMouseMotionListener(new MouseAdapter() {
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                super.mouseMoved(e);
+                RadniProzor.rightLabel.setText("x:" + e.getX() + ", y:" + (getHeight() - e.getY()));
+
+            }
+            @Override
+            public void mouseDragged(MouseEvent e){
+                super.mouseDragged(e);
             }
         });
     }
@@ -36,12 +47,21 @@ public class WorkPanel extends JPanel {
         drawing = crtez;
     }
 
+    // Novi crtez
     public void openNewDrawing(Crtez newDrawing){
         drawing = newDrawing;
     }
 
+    // Promena alata
+    public void changeTool(Alat noviAlat){
+        selectedTool = noviAlat;
+    }
+
     @Override
     public void paint(Graphics g){
+        g.setColor(Color.WHITE);
+        g.fillRect(0,0,getWidth(), getHeight()); // clear canvas
+
         if(drawing != null)
             drawing.paintAll(g);
     }

@@ -1,12 +1,9 @@
 package Grafika;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Matija on 10 Jun 17.
@@ -16,9 +13,28 @@ public class RadniProzor extends JFrame {
     private JMenuBar menuBar;
     private JMenu file, help;
     private JMenuItem newFile, save, saveAs, closeThis, quit, about;
+
+    // Toolbar elements
     private JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    public ButtonGroup toolsGroup = new ButtonGroup();
+    public static final String[] toolNames = new String[]{ "Select", "Erase", "Line", "Lines", "Closed Lines", "Rectangle"};
+    public static final JComboBox<Integer> lineThick = new JComboBox<>(new Integer[]{1,2,3,4,5});
+
+    // Canvas elementi
+    private static WorkPanel workPanel = new WorkPanel();
+    // List of tools
+    public static final HashMap<String, Alat> toolsList = new HashMap<>();
+    static{
+        toolsList.put("Line", new CrtanjeLinija());
+    }
+
+
+    // Status bar
     private JPanel statusbar = new JPanel(new GridLayout(1,2));
-    private WorkPanel workPanel = new WorkPanel();
+    public static JLabel leftLabel, rightLabel;
+
+
+
 
     private Point start, end;
 
@@ -97,14 +113,29 @@ public class RadniProzor extends JFrame {
         toolbar.setBackground(Color.WHITE);
         toolbar.add(new JLabel("Matija"));
 
+        // Za svako ime alata
+        for(String toolName : toolNames){
+            JButton newBtn = new JButton(toolName);
+            toolsGroup.add(newBtn);
+            toolbar.add(newBtn);
+        }
+
+        // Dodavanje dodavanje debljine linije
+        toolbar.add(new JLabel("Line thick:"));
+        toolbar.add(lineThick);
+
+
         add(toolbar, BorderLayout.NORTH);
     }
 
     private void makeStatus(){
-        statusbar.setBackground(Color.DARK_GRAY);
+        statusbar.setBackground(Color.LIGHT_GRAY);
 
-        statusbar.add(new JLabel("Levo", JLabel.LEFT));
-        statusbar.add(new JLabel("Desno", JLabel.RIGHT));
+        // Postavljanje labela
+        leftLabel = new JLabel("Levo", JLabel.LEFT);
+        rightLabel = new JLabel("Desno", JLabel.RIGHT);
+        statusbar.add(leftLabel);
+        statusbar.add(rightLabel);
 
         add(statusbar, BorderLayout.SOUTH);
     }

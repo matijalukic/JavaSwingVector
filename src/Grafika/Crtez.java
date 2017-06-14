@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * Created by Matija on 12 Jun 17.
  */
 public class Crtez {
-    private Graphics2D g;
     private ArrayList<Figura> lines;
 
     public Crtez(Figura... figure){
