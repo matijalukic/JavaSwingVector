@@ -1,5 +1,7 @@
 package Grafika;
 
+import Grafika.Figure.Figura;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -17,9 +19,26 @@ public class Crtez {
         }
 
     }
-
+    // Dodavanje Figure
     public void addFigure(Figura newFigure){
         lines.add(newFigure);
+    }
+
+    // Selektovanje figure na osnovu pointa
+    public Figura selectFigure(Point coord){
+
+        int indexFigure = lines.size() - 1;
+
+        while(indexFigure >= 0){
+            Figura tempFigura = lines.get(indexFigure);
+
+            if(tempFigura.selected(coord))
+                return tempFigura;
+
+            indexFigure --;
+        }
+
+        return null;
     }
 
     public void paintAll(Graphics g){

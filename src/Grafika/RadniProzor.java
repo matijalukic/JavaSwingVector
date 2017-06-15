@@ -1,9 +1,12 @@
 package Grafika;
 
+import Grafika.Alati.Alat;
+import Grafika.Alati.CrtanjeLinija;
+import Grafika.Figure.Duz;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by Matija on 10 Jun 17.
@@ -19,6 +22,7 @@ public class RadniProzor extends JFrame {
     public ButtonGroup toolsGroup = new ButtonGroup();
     public static final String[] toolNames = new String[]{ "Select", "Erase", "Line", "Lines", "Closed Lines", "Rectangle"};
     public static final JComboBox<Integer> lineThick = new JComboBox<>(new Integer[]{1,2,3,4,5});
+    public static ColorChooserButton lineColor = new ColorChooserButton(Color.BLACK);
 
     // Canvas elementi
     private static WorkPanel workPanel = new WorkPanel();
@@ -123,6 +127,8 @@ public class RadniProzor extends JFrame {
         // Dodavanje dodavanje debljine linije
         toolbar.add(new JLabel("Line thick:"));
         toolbar.add(lineThick);
+
+        toolbar.add(lineColor);
 
 
         add(toolbar, BorderLayout.NORTH);

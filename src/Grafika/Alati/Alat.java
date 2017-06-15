@@ -1,4 +1,4 @@
-package Grafika;
+package Grafika.Alati;
 
 import java.awt.event.*;
 
@@ -17,4 +17,5 @@ public abstract class Alat {
     public abstract void mousePressed(MouseEvent e);
     public abstract void mouseReleased(MouseEvent e);
     public abstract void mouseClicked(MouseEvent e);
+    public abstract void mouseDrag(MouseEvent e);
 }

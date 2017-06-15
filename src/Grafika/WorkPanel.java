@@ -1,5 +1,6 @@
 package Grafika;
 
+import Grafika.Alati.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,7 +10,7 @@ import java.awt.event.*;
  */
 public class WorkPanel extends JPanel {
     public static Crtez drawing = new Crtez(); // Crtez
-    public static Alat selectedTool = new CrtanjeLinija();
+    public static Alat selectedTool = new Pomeranje();
 
 
     public WorkPanel(){
@@ -19,13 +20,13 @@ public class WorkPanel extends JPanel {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                // Pravimo pocetnu tacku
+
                 selectedTool.mousePressed(e);
             }
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                selectedTool.mouseReleased(e);
+                //selectedTool.mouseReleased(e);
                 repaint();
             }
         });
@@ -34,12 +35,14 @@ public class WorkPanel extends JPanel {
             @Override
             public void mouseMoved(MouseEvent e) {
                 super.mouseMoved(e);
-                RadniProzor.rightLabel.setText("x:" + e.getX() + ", y:" + (getHeight() - e.getY()));
+                RadniProzor.rightLabel.setText("x:" + e.getX() + ", y:" + e.getY());
 
             }
             @Override
             public void mouseDragged(MouseEvent e){
                 super.mouseDragged(e);
+                selectedTool.mouseDrag(e);
+                repaint();
             }
         });
     }

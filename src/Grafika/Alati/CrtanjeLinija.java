@@ -1,4 +1,7 @@
-package Grafika;
+package Grafika.Alati;
+
+import Grafika.*;
+import Grafika.Figure.*;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -22,11 +25,16 @@ public class CrtanjeLinija extends Alat {
     @Override
     public void mouseReleased(MouseEvent e){
         end = e.getPoint();
-        WorkPanel.drawing.addFigure(new Duz(start,end, (int)RadniProzor.lineThick.getSelectedItem(), Color.BLUE));
+        WorkPanel.drawing.addFigure(new Duz(start,end, (int) RadniProzor.lineThick.getSelectedItem(), RadniProzor.lineColor.getSelectedColor()));
     }
 
     @Override
     public void mouseClicked(MouseEvent e){
+
+    }
+
+    @Override
+    public void mouseDrag(MouseEvent e){
 
     }
 }
