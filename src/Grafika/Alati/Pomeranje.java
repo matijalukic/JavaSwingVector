@@ -33,23 +33,11 @@ public class Pomeranje extends Alat {
     }
 
     @Override
-    public void mouseReleased(MouseEvent e){
-
-        if(figuraToMove != null){ // Ako smo selektovali
-            toPos = e.getPoint();
-            Point deltaMove = new Point(toPos.x - fromPos.x, toPos.y - fromPos.y);
-
-            figuraToMove.move(deltaMove);
-
-            figuraToMove = null; // pomeramo samo jedanput
-        }
-    }
+    public void mouseReleased(MouseEvent e){}
 
     @Override
     public void mouseDrag(MouseEvent e){
         Point newPoint = e.getPoint();
-
-        figuraToMove = WorkPanel.drawing.selectFigure(newPoint);
 
         if(figuraToMove != null) {
             figuraToMove.moveNew(newPoint);

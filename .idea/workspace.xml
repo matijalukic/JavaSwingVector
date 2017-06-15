@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e4b8261-21a9-4cd1-8b9a-2cc253ed166b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Grafika/ColorChooserButton.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Alat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/CrtanjeLinija.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Duz.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Figura.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Grafika/Alat.java" afterPath="$PROJECT_DIR$/src/Grafika/Alati/Alat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Grafika/CrtanjeLinija.java" afterPath="$PROJECT_DIR$/src/Grafika/Alati/CrtanjeLinija.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Grafika/Duz.java" afterPath="$PROJECT_DIR$/src/Grafika/Figure/Duz.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Grafika/Figura.java" afterPath="$PROJECT_DIR$/src/Grafika/Figure/Figura.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Crtez.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Crtez.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/RadniProzor.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/RadniProzor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/WorkPanel$1.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/WorkPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/WorkPanel$2.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/WorkPanel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/WorkPanel.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/WorkPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafika/Crtez.java" afterPath="$PROJECT_DIR$/src/Grafika/Crtez.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafika/RadniProzor.java" afterPath="$PROJECT_DIR$/src/Grafika/RadniProzor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafika/WorkPanel.java" afterPath="$PROJECT_DIR$/src/Grafika/WorkPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java" afterPath="$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pomeranje.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Pomeranje.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Duz.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Duz.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grafika/Figure/Duz.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-289">
@@ -173,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/Grafika/Alati/CrtanjeLinija.java" />
         <option value="$PROJECT_DIR$/src/Grafika/Figure/Figura.java" />
         <option value="$PROJECT_DIR$/src/Grafika/WorkPanel.java" />
-        <option value="$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java" />
         <option value="$PROJECT_DIR$/src/Grafika/Figure/Duz.java" />
+        <option value="$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java" />
       </list>
     </option>
   </component>
@@ -570,12 +551,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Grafika/Figure/Duz.java</url>
           <line>30</line>
@@ -1043,21 +1018,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Grafika/Figure/Duz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-289">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grafika/Alati/Pomeranje.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="35" column="44" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
