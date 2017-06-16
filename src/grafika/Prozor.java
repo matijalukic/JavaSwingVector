@@ -1,7 +1,6 @@
-package Grafika;
+package grafika;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by Matija on 10 Jun 17.

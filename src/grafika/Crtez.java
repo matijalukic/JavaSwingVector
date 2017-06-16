@@ -1,6 +1,6 @@
-package Grafika;
+package grafika;
 
-import Grafika.Figure.Figura;
+import grafika.elementi.*;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class Crtez {
         }
 
     }
-    // Dodavanje Figure
+    // Dodavanje elementi
     public void addFigure(Figura newFigure){
         lines.add(newFigure);
     }

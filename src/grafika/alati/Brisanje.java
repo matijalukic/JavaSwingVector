@@ -1,12 +1,10 @@
-package Grafika.Alati;
+package grafika.alati;
 
-import Grafika.Figure.Figura;
-import Grafika.WorkPanel;
+import grafika.elementi.*;
+import grafika.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
-
-import static Grafika.WorkPanel.drawing;
 
 /**
  * Created by Matija on 16 Jun 17.

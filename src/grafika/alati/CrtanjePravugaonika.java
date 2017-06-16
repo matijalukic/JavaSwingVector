@@ -1,8 +1,7 @@
-package Grafika.Alati;
+package grafika.alati;
 
-import Grafika.Figure.Pravugaonik;
-import Grafika.RadniProzor;
-import Grafika.WorkPanel;
+import grafika.elementi.*;
+import grafika.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;

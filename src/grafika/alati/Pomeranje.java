@@ -1,7 +1,7 @@
-package Grafika.Alati;
+package grafika.alati;
 
-import Grafika.Figure.Figura;
-import Grafika.WorkPanel;
+import grafika.elementi.*;
+import grafika.*;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
  * Created by Matija on 15 Jun 17.
  */
 public class Pomeranje extends Alat {
-    private Point fromPos, toPos, oldPoint = new Point(0,0);
+    private Point fromPos;
     private Figura figuraToMove;
 
     public Pomeranje(){
@@ -35,12 +35,10 @@ public class Pomeranje extends Alat {
     @Override
     public void mouseDrag(MouseEvent e){
         Point newPoint = e.getPoint();
-
+        System.out.println("Firua koju pomeramo : " + figuraToMove);
         if(figuraToMove != null) {
             figuraToMove.moveNew(newPoint);
         }
-
-        oldPoint = newPoint;
 
     }
 }

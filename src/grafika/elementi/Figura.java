@@ -1,6 +1,5 @@
-package Grafika.Figure;
+package grafika.elementi;
 
-import javax.swing.*;
 import java.awt.*;
 /**
  * Created by Matija on 12 Jun 17.

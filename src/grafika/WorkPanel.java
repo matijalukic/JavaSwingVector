@@ -1,6 +1,6 @@
-package Grafika;
+package grafika;
 
-import Grafika.Alati.*;
+import grafika.alati.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

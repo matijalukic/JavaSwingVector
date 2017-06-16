@@ -1,4 +1,4 @@
-package Grafika.Figure;
+package grafika.elementi;
 
 import java.awt.*;
 

@@ -1,13 +1,11 @@
-package Grafika;
+package grafika;
 
-import Grafika.Alati.*;
-import Grafika.Figure.Duz;
+import grafika.alati.*;
+import grafika.elementi.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * Created by Matija on 10 Jun 17.
@@ -33,6 +31,8 @@ public class RadniProzor extends JFrame {
         toolsList.put(toolNames[0], new Pomeranje());
         toolsList.put(toolNames[1], new Brisanje());
         toolsList.put(toolNames[2], new CrtanjeLinija());
+        toolsList.put(toolNames[3], new CrtanjeIzlomljenih());
+        toolsList.put(toolNames[4], new CrtanjeZatvorenih());
         toolsList.put(toolNames[5], new CrtanjePravugaonika());
     }
 

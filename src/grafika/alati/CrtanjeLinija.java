@@ -1,7 +1,7 @@
-package Grafika.Alati;
+package grafika.alati;
 
-import Grafika.*;
-import Grafika.Figure.*;
+import grafika.*;
+import grafika.elementi.*;
 
 import java.awt.*;
 import java.awt.event.*;

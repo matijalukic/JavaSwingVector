@@ -1,4 +1,4 @@
-package Grafika.Alati;
+package grafika.alati;
 
 import java.awt.event.*;
 
