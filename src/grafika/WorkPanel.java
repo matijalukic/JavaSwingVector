@@ -30,6 +30,7 @@ public class WorkPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e){
                 super.mouseClicked(e);
+                System.out.println("Clicked mouse");
                 selectedTool.mouseClicked(e);
                 repaint();
             }

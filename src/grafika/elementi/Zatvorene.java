@@ -9,12 +9,13 @@ import java.util.ArrayList;
 public class Zatvorene extends Figura {
 
     private ArrayList<Point> tacke = new ArrayList<>();
+    private boolean finished;
 
     public Zatvorene(ArrayList<Point> tacke, int thick, Color color) {
         super(thick, color);
 
         this.tacke = tacke;
-
+        finished = false;
     }
 
     // Dodaj tacku
@@ -24,6 +25,10 @@ public class Zatvorene extends Figura {
         tacke.add(newPoint);
     }
 
+    // Ozacava finished flag da se iscrta poslednja linija
+    public void setFinished(boolean newFinished){
+        finished = newFinished;
+    }
 
     @Override
     public void iscrtaj(Graphics2D g) {
@@ -33,10 +38,12 @@ public class Zatvorene extends Figura {
 
         int tacaka = tacke.size();
         // Za svake 2 tacke iscrtavamo
-        for (int i = 0; i < tacaka; i++) {
-            int slTacka = (i + 1) % tacaka;
-            g.drawLine(tacke.get(i).x, tacke.get(i).y, tacke.get(slTacka).x, tacke.get(slTacka).y);
+        for (int i = 0; i < tacaka - 1; i++) {
+            g.drawLine(tacke.get(i).x, tacke.get(i).y, tacke.get(i+1).x, tacke.get(i+1).y);
         }
+
+        if(finished) // Spajamo poslednju i prvu ako je gotovo
+            g.drawLine(startPoint.x, startPoint.y, tacke.get(tacaka - 1).x, tacke.get(tacaka - 1).y);
 
     }
 

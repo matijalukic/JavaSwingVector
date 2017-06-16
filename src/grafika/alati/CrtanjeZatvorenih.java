@@ -37,9 +37,8 @@ public class CrtanjeZatvorenih extends Alat {
             // Double click
             if (e.getClickCount() == 2) {
                 // Prelazimo na novu
+                zatvorenaLinija.setFinished(true); // Oznacavamo da se iscrta na kraju
                 zatvorenaLinija = null;
-
-                System.out.println("Sledeci klik ce napraviti novu!");
             }
         }
     }

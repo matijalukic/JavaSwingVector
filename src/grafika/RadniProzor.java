@@ -19,7 +19,7 @@ public class RadniProzor extends JFrame {
     // Toolbar elements
     private JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
     public ButtonGroup toolsGroup = new ButtonGroup();
-    public static final String[] toolNames = new String[]{ "Select", "Erase", "Line", "Lines", "Closed Lines", "Rectangle"};
+    public static final String[] toolNames = new String[]{ "Move", "Erase", "Line", "Lines", "Closed Lines", "Rectangle"};
     public static final JComboBox<Integer> lineThick = new JComboBox<>(new Integer[]{1,2,3,4,5});
     public static ColorChooserButton lineColor = new ColorChooserButton(Color.BLACK);
 
