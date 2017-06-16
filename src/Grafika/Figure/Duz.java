@@ -7,8 +7,7 @@ import java.awt.*;
  * Created by Matija on 12 Jun 17.
  */
 public class Duz extends Figura {
-    private Point startPoint, endPoint;
-    private int deltaStartX, deltaStartY; // rastojanje gde je mis uhvatio u odnosu na pocetak
+    private Point endPoint;
 
 
     public Duz(Point startPoint, Point endPoint, int thick, Color color){
@@ -58,10 +57,10 @@ public class Duz extends Figura {
         endPoint = newEnd;
     }
 
-    @Override // Izracunavamo nove relativne koordinate u odnosu na hvatanje misa
-    public void setNewCatch(Point newCatch){
-        deltaStartX = startPoint.x - newCatch.x;
-        deltaStartY = startPoint.y - newCatch.y;
+
+    // Postavljanje novog kraja
+    public void setNewEnd(Point newEnd){
+        endPoint = newEnd;
     }
 
     @Override

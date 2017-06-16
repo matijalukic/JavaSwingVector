@@ -18,8 +18,7 @@ public class Pomeranje extends Alat {
     }
 
     @Override
-    public void mouseClicked(MouseEvent e){
-    }
+    public void mouseClicked(MouseEvent e){}
 
     @Override
     public void mousePressed(MouseEvent e){
@@ -28,8 +27,6 @@ public class Pomeranje extends Alat {
 
         if(figuraToMove != null)
             figuraToMove.setNewCatch(fromPos);
-
-        System.out.println("Mouse pressed: " + figuraToMove);
     }
 
     @Override

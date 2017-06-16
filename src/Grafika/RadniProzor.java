@@ -1,11 +1,12 @@
 package Grafika;
 
-import Grafika.Alati.Alat;
-import Grafika.Alati.CrtanjeLinija;
+import Grafika.Alati.*;
 import Grafika.Figure.Duz;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 /**
@@ -29,7 +30,10 @@ public class RadniProzor extends JFrame {
     // List of tools
     public static final HashMap<String, Alat> toolsList = new HashMap<>();
     static{
-        toolsList.put("Line", new CrtanjeLinija());
+        toolsList.put(toolNames[0], new Pomeranje());
+        toolsList.put(toolNames[1], new Brisanje());
+        toolsList.put(toolNames[2], new CrtanjeLinija());
+        toolsList.put(toolNames[5], new CrtanjePravugaonika());
     }
 
 
@@ -115,13 +119,18 @@ public class RadniProzor extends JFrame {
     // Fill the toolbar
     private void makeTools(){
         toolbar.setBackground(Color.WHITE);
-        toolbar.add(new JLabel("Matija"));
+        toolbar.add(new JLabel("Tools:"));
 
         // Za svako ime alata
         for(String toolName : toolNames){
             JButton newBtn = new JButton(toolName);
             toolsGroup.add(newBtn);
             toolbar.add(newBtn);
+
+            // Dodavanje eventa
+            newBtn.addActionListener((e) -> {
+                    WorkPanel.selectedTool = toolsList.get(toolName);
+            });
         }
 
         // Dodavanje dodavanje debljine linije

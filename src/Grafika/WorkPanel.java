@@ -5,9 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * Created by Matija on 12 Jun 17.
- */
+
 public class WorkPanel extends JPanel {
     public static Crtez drawing = new Crtez(); // Crtez
     public static Alat selectedTool = new Pomeranje();
@@ -26,7 +24,13 @@ public class WorkPanel extends JPanel {
             @Override
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
-                //selectedTool.mouseReleased(e);
+                selectedTool.mouseReleased(e);
+                repaint();
+            }
+            @Override
+            public void mouseClicked(MouseEvent e){
+                super.mouseClicked(e);
+                selectedTool.mouseClicked(e);
                 repaint();
             }
         });
@@ -35,6 +39,7 @@ public class WorkPanel extends JPanel {
             @Override
             public void mouseMoved(MouseEvent e) {
                 super.mouseMoved(e);
+                // Ispisujemo kordinate
                 RadniProzor.rightLabel.setText("x:" + e.getX() + ", y:" + e.getY());
 
             }

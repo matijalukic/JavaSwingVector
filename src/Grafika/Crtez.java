@@ -48,5 +48,18 @@ public class Crtez {
         }
     }
 
+    public void deleteFigura(Figura toDelete){
+        int indexFigure = lines.size() - 1;
+
+        // Pronalazimo
+        while (indexFigure >= 0 && lines.get(indexFigure) != toDelete){
+            indexFigure --;
+        }
+
+        if(indexFigure != -1) // Ako smo pronasli
+            lines.remove(indexFigure);
+
+    }
+
 
 }
