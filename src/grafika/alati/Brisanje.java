@@ -29,4 +29,5 @@ public class Brisanje extends Alat {
 
     @Override
     public void mouseDrag(MouseEvent e) {}
+
 }

@@ -5,6 +5,8 @@ import grafika.elementi.*;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
 /**
  * Created by Matija on 14 Jun 17.
@@ -42,5 +44,19 @@ public class CrtanjeLinija extends Alat {
     public void mouseDrag(MouseEvent e){
         end = e.getPoint();
         newLine.setNewEnd(end);
+
+        StringBuilder rightLabelTxt = new StringBuilder();
+        DecimalFormat df = new DecimalFormat("#.###");
+        df.setRoundingMode(RoundingMode.CEILING);
+
+        if(end != null)
+            rightLabelTxt.append("Distance: " + df.format(Point.distance(start.x, start.y,  end.x, end.y)));
+
+        rightLabelTxt.append( " X: " + end.x + " Y: " + end.y);
+
+        RadniProzor.rightLabel.setText(rightLabelTxt.toString());
     }
+
+
+
 }

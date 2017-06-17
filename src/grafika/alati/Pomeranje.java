@@ -21,14 +21,24 @@ public class Pomeranje extends Alat {
     public void mouseClicked(MouseEvent e){}
 
     @Override
-    public void mousePressed(MouseEvent e){
+    public void mousePressed(MouseEvent e) {
         fromPos = e.getPoint();
-        figuraToMove = WorkPanel.drawing.selectFigure(fromPos);
+        Figura newFigure = WorkPanel.drawing.selectFigure(fromPos);
 
-        if(figuraToMove != null)
+
+        if(figuraToMove != null && newFigure != null) { // Ako postoje i stara i nova selektovana gasimo selektovanost za staru
+            figuraToMove.setSelected(false); // Ponistavamo selektovani flag
+        }
+
+        if (newFigure != null) { // Ako postoji nova figura selektujemo nju
+            figuraToMove = newFigure;
+            figuraToMove.setSelected(true); // selektovan je novi
+        }
+
+
+        if(figuraToMove != null) // Ako postoji selektovana figura hvatamo njen catch
             figuraToMove.setNewCatch(fromPos);
     }
-
     @Override
     public void mouseReleased(MouseEvent e){}
 
@@ -39,6 +49,8 @@ public class Pomeranje extends Alat {
         if(figuraToMove != null) {
             figuraToMove.moveNew(newPoint);
         }
+
+        RadniProzor.rightLabel.setText("X:" + newPoint.getX() + " Y:" + newPoint.getY());
 
     }
 }

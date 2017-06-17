@@ -16,6 +16,7 @@ public class ColorChooserButton extends JButton {
             public void actionPerformed(ActionEvent arg0) {
                 Color newColor = JColorChooser.showDialog(null, "Choose a color", current);
                 setSelectedColor(newColor);
+                RadniProzor.updateStatus(); // update colora
             }
         });
     }

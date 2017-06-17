@@ -9,7 +9,10 @@ public abstract class Figura {
     protected Color lineColor = Color.BLACK;
     protected Point startPoint;
     protected int deltaStartX, deltaStartY; // rastojanje gde je mis uhvatio u odnosu na pocetak
+    protected boolean figureSelected;
 
+    protected static Color selectionColor = new Color(255,255,0,85);
+    protected static int catchCoef = 2; // lineThick * catchCoef = click to select area
 
     public Figura(int thick, Color color) {
         lineThick = thick;
@@ -27,5 +30,10 @@ public abstract class Figura {
     public void setNewCatch(Point catchPos) { // Izracunava relativne kordinate gde ga hvata mis
         deltaStartX = startPoint.x - catchPos.x;
         deltaStartY = startPoint.y - catchPos.y;
+    }
+
+    // Podesava da li je selektovan
+    public void setSelected(boolean select){
+        figureSelected = select;
     }
 }

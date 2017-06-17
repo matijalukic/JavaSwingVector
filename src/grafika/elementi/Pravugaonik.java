@@ -17,14 +17,25 @@ public class Pravugaonik extends Figura {
 
     @Override
     public void iscrtaj(Graphics2D g) {
+        if(figureSelected){
+            g.setColor(selectionColor);
+            g.setStroke(new BasicStroke(lineThick * 3, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+
+            iscrtajLinije(g);
+        }
+
         g.setColor(lineColor);
         g.setStroke(new BasicStroke(lineThick));
 
+        iscrtajLinije(g);
+
+    }
+
+    public void iscrtajLinije(Graphics2D g){
         g.drawLine(startPoint.x, startPoint.y, endPoint.x, startPoint.y);
         g.drawLine(startPoint.x, startPoint.y, startPoint.x, endPoint.y);
         g.drawLine(endPoint.x, endPoint.y, endPoint.x, startPoint.y);
         g.drawLine(endPoint.x, endPoint.y, startPoint.x, endPoint.y);
-
     }
 
     @Override

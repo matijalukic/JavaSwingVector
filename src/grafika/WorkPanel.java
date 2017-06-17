@@ -41,8 +41,7 @@ public class WorkPanel extends JPanel {
             public void mouseMoved(MouseEvent e) {
                 super.mouseMoved(e);
                 // Ispisujemo kordinate
-                RadniProzor.rightLabel.setText("x:" + e.getX() + ", y:" + e.getY());
-
+                selectedTool.mouseMove(e);
             }
             @Override
             public void mouseDragged(MouseEvent e){

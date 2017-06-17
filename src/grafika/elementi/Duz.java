@@ -17,9 +17,21 @@ public class Duz extends Figura {
 
 
     public void iscrtaj(Graphics2D g){
+        if(figureSelected) { // Ako je selektovano
+            g.setColor(selectionColor);
+            g.setStroke(new BasicStroke(3 * lineThick, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+            iscrtajLinije(g);
+        }
+
+
         g.setColor(lineColor);
         g.setStroke(new BasicStroke(lineThick));
+        iscrtajLinije(g);
+    }
+
+    public void iscrtajLinije(Graphics2D g){
         g.drawLine(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+
     }
 
     // Da li je selektovana
@@ -34,9 +46,9 @@ public class Duz extends Figura {
 
         d = (A*coord.getX() + B*coord.getY() + C) / Math.sqrt(A*A + B*B);
 
-        if(Math.abs(d) < 2*lineThick)
+        if(Math.abs(d) < catchCoef*lineThick) {
             return true;
-
+        }
         return false;
     }
 

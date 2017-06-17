@@ -39,5 +39,15 @@ public class CrtanjePravugaonika extends Alat {
 
         pravugaonik.setEndPoint(end);
 
+        StringBuilder rightLabelTxt = new StringBuilder();
+
+        int width = Math.abs(end.x - start.x);
+        int height = Math.abs(end.y - start.y);
+
+        rightLabelTxt.append("Width: " + width + " Height: " + height);
+        rightLabelTxt.append( " X: " + end.x + " Y: " + end.y);
+
+        RadniProzor.rightLabel.setText(rightLabelTxt.toString());
+
     }
 }

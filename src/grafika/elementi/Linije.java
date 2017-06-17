@@ -26,16 +26,29 @@ public class Linije extends Figura {
 
     @Override
     public void iscrtaj(Graphics2D g) {
+
+        if(figureSelected){
+            g.setColor(selectionColor);
+            g.setStroke(new BasicStroke(lineThick * 3, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+
+            iscrtajLinije(g);
+
+        }
+
         g.setColor(lineColor);
         g.setStroke(new BasicStroke(lineThick));
 
+        iscrtajLinije(g);
 
-        int tacaka = tacke.size();
+    }
+
+    public void iscrtajLinije(Graphics2D g){
+        int tacaka = tacke.size(); // broj tacaka
+
         // Za svake 2 tacke iscrtavamo
         for (int i = 0; i < tacaka - 1; i++) {
             g.drawLine(tacke.get(i).x, tacke.get(i).y, tacke.get(i + 1).x, tacke.get(i + 1).y);
         }
-
     }
 
     @Override

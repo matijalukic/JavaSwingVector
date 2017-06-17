@@ -20,6 +20,7 @@ public class RadniProzor extends JFrame {
     private JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
     public ButtonGroup toolsGroup = new ButtonGroup();
     public static final String[] toolNames = new String[]{ "Move", "Erase", "Line", "Lines", "Closed Lines", "Rectangle"};
+    public static String currentToolName = toolNames[0];
     public static final JComboBox<Integer> lineThick = new JComboBox<>(new Integer[]{1,2,3,4,5});
     public static ColorChooserButton lineColor = new ColorChooserButton(Color.BLACK);
 
@@ -28,12 +29,19 @@ public class RadniProzor extends JFrame {
     // List of tools
     public static final HashMap<String, Alat> toolsList = new HashMap<>();
     static{
+        // Unosimo u hesh mapu
         toolsList.put(toolNames[0], new Pomeranje());
         toolsList.put(toolNames[1], new Brisanje());
         toolsList.put(toolNames[2], new CrtanjeLinija());
         toolsList.put(toolNames[3], new CrtanjeIzlomljenih());
         toolsList.put(toolNames[4], new CrtanjeZatvorenih());
         toolsList.put(toolNames[5], new CrtanjePravugaonika());
+
+        // Ako se promeni
+        lineThick.addActionListener((e) -> {
+            updateStatus();
+        });
+
     }
 
 
@@ -121,7 +129,7 @@ public class RadniProzor extends JFrame {
         toolbar.setBackground(Color.WHITE);
         toolbar.add(new JLabel("Tools:"));
 
-        // Za svako ime alata
+        // Za svako ime alata dodajemo button
         for(String toolName : toolNames){
             JButton newBtn = new JButton(toolName);
             toolsGroup.add(newBtn);
@@ -129,7 +137,9 @@ public class RadniProzor extends JFrame {
 
             // Dodavanje eventa
             newBtn.addActionListener((e) -> {
-                    WorkPanel.selectedTool = toolsList.get(toolName);
+                WorkPanel.selectedTool = toolsList.get(toolName);
+                currentToolName = toolName;
+                updateStatus();
             });
         }
 
@@ -147,8 +157,9 @@ public class RadniProzor extends JFrame {
         statusbar.setBackground(Color.LIGHT_GRAY);
 
         // Postavljanje labela
-        leftLabel = new JLabel("Levo", JLabel.LEFT);
-        rightLabel = new JLabel("Desno", JLabel.RIGHT);
+        leftLabel = new JLabel(toolNames[0] + " selected", JLabel.LEFT);
+        updateStatus();
+        rightLabel = new JLabel("", JLabel.RIGHT);
         statusbar.add(leftLabel);
         statusbar.add(rightLabel);
 
@@ -167,6 +178,11 @@ public class RadniProzor extends JFrame {
         workPanel.openNewDrawing(novi);
 
         add(workPanel, BorderLayout.CENTER);
+    }
+
+    public static void updateStatus(){
+        Color currColor = lineColor.getSelectedColor();
+        leftLabel.setText(currentToolName + " selected, color: rgb(" + currColor.getRed() + ", " + currColor.getGreen() + ", " + currColor.getBlue() + "), thickness: " +  lineThick.getSelectedItem());
     }
 
 }

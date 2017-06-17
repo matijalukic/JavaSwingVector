@@ -32,19 +32,32 @@ public class Zatvorene extends Figura {
 
     @Override
     public void iscrtaj(Graphics2D g) {
+
+        if(figureSelected){ // Ako je selektovan
+            g.setColor(selectionColor);
+            g.setStroke(new BasicStroke(lineThick * 3, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+
+            iscrtajLinije(g);
+        }
+
         g.setColor(lineColor);
         g.setStroke(new BasicStroke(lineThick));
 
+        iscrtajLinije(g);
 
+    }
+
+    public void iscrtajLinije(Graphics2D g){ // Samo iscrtavanje linija
         int tacaka = tacke.size();
         // Za svake 2 tacke iscrtavamo
         for (int i = 0; i < tacaka - 1; i++) {
             g.drawLine(tacke.get(i).x, tacke.get(i).y, tacke.get(i+1).x, tacke.get(i+1).y);
         }
 
-        if(finished) // Spajamo poslednju i prvu ako je gotovo
+        if(finished) { // Spajamo poslednju i prvu ako je gotovo
             g.drawLine(startPoint.x, startPoint.y, tacke.get(tacaka - 1).x, tacke.get(tacaka - 1).y);
 
+        }
     }
 
     @Override
