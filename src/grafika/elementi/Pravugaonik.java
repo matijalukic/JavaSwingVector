@@ -1,7 +1,7 @@
 package grafika.elementi;
 
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by Matija on 16 Jun 17.
@@ -31,6 +31,15 @@ public class Pravugaonik extends Figura {
             this.startPoint = newPoints.get(0);
             this.endPoint = newPoints.get(1);
         }
+    }
+
+    @Override
+    public ArrayList<Point> getPoints(){
+        ArrayList<Point> retList = new ArrayList<>();
+        retList.add(startPoint);
+        retList.add(endPoint);
+
+        return retList;
     }
 
 

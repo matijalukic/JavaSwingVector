@@ -57,6 +57,4 @@ public class CrtanjeLinija extends Alat {
         RadniProzor.rightLabel.setText(rightLabelTxt.toString());
     }
 
-
-
 }

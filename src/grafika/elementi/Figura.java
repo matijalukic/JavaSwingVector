@@ -30,6 +30,7 @@ public abstract class Figura {
     public abstract void moveNew(Point newPos); // pomeri na novu
 
     public abstract void setPoints(ArrayList<Point> points); // Postavi nove tacke
+    public abstract ArrayList<Point> getPoints(); // Dohvati tacke
 
     // Ono sto pamtimo za svaku figuru
     public String saveFormat(){

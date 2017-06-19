@@ -42,13 +42,24 @@ public class CrtanjeIzlomljenih extends Alat {
             // Double click
             if (e.getClickCount() == 2) {
                 // Prelazimo na novu
-                izlomljena = null;
+                resetTool();
             }
         }
     }
 
+    public void resetTool(){
+        izlomljena = null;
+    }
+
     @Override
     public void mouseDrag(MouseEvent e) {}
+
+
+    @Override
+    public void undo(){
+        super.undo();
+        resetTool();
+    }
 
     @Override
     public void mouseMove(MouseEvent e){

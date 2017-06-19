@@ -41,9 +41,20 @@ public class CrtanjeZatvorenih extends Alat {
             if (e.getClickCount() == 2) {
                 // Prelazimo na novu
                 zatvorenaLinija.setFinished(true); // Oznacavamo da se iscrta na kraju
-                zatvorenaLinija = null;
+                resetTool();
             }
         }
+    }
+
+    @Override
+    public void undo(){
+        zatvorenaLinija.setFinished(true);
+        super.undo();
+        resetTool();
+    }
+
+    public void resetTool(){
+        zatvorenaLinija = null;
     }
 
     @Override

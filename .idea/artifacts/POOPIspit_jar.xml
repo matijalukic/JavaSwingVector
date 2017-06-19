@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="POOPIspit:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/POOPIspit_jar</output-path>
+    <root id="archive" name="POOPIspit.jar">
+      <element id="module-output" name="POOPIspit" />
+    </root>
+  </artifact>
+</component>

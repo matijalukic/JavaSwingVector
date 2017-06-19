@@ -34,6 +34,15 @@ public class Duz extends Figura {
         }
     }
 
+    @Override
+    public ArrayList<Point> getPoints(){
+        ArrayList<Point> retList = new ArrayList<>();
+        retList.add(startPoint);
+        retList.add(endPoint);
+
+        return retList;
+    }
+
 
     public void iscrtaj(Graphics2D g){
         if(figureSelected) { // Ako je selektovano

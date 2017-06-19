@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Created by Matija on 16 Jun 17.
  */
 public class Linije extends Figura {
-    private ArrayList<Point> tacke = new ArrayList<>();
+    protected ArrayList<Point> tacke = new ArrayList<>();
 
     public Linije(ArrayList<Point> tacke, int thick, Color color) {
         super(thick, color);
@@ -21,6 +21,11 @@ public class Linije extends Figura {
             this.startPoint = newPoints.get(0);
             tacke = newPoints;
         }
+    }
+
+    @Override
+    public ArrayList<Point> getPoints(){
+        return tacke;
     }
 
     // Dodaj tacku

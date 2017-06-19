@@ -1,13 +1,16 @@
 package grafika;
 
+import com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor;
+import grafika.alati.CrtanjeIzlomljenih;
+import grafika.alati.CrtanjeZatvorenih;
 import grafika.elementi.*;
 
 import java.awt.*;
 import java.io.*;
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,8 +22,10 @@ public class Crtez {
     private BufferedWriter writeToFile;
     private BufferedReader loadToFile;
 
-    private final static Pattern lineFormat = Pattern.compile("([^\\(]+)\\(([\\-0-9]+),([\\-0-9]+)\\):((([\\-0-9]+),([\\-0-9]+);){2,})");
     private final static Pattern pointFormat = Pattern.compile("([\\-0-9]+),([\\-0-9]+)");
+    private final static Pattern lineFormat = Pattern.compile("([^\\(]+)\\(([\\-0-9]+),([\\-0-9]+)\\):((([\\-0-9]+),([\\-0-9]+);){2,})");
+
+    public Stack<Figura> undoFigures = new Stack<>();
 
 
     public static Map<String, Figura> mapTypes = new HashMap<>();
@@ -92,6 +97,19 @@ public class Crtez {
         }
     }
 
+    // Dohvatanje poslednje
+    public Figura popLast(){
+        int indexFigure = lines.size() - 1;
+
+        if(indexFigure >= 0){
+            Figura toReturn = lines.get(indexFigure);
+            lines.remove(indexFigure);
+            return toReturn;
+        }
+
+        return null;
+    }
+
     // Delete jedne figure
     public void deleteFigura(Figura toDelete){
         int indexFigure = lines.size() - 1;
@@ -101,9 +119,15 @@ public class Crtez {
             indexFigure --;
         }
 
-        if(indexFigure != -1) // Ako smo pronasli
-            lines.remove(indexFigure);
 
+
+        if(indexFigure != -1) { // Ako smo pronasli
+            // Ubacujemo na stek
+            //undoFigures.push(lines.get(indexFigure));
+
+            // Brisemo je
+            lines.remove(indexFigure);
+        }
     }
 
     // Load file-a
@@ -186,6 +210,46 @@ public class Crtez {
     // Obrisi sve
     public void deleteAll(){
         lines.clear();
+    }
+
+    // undo
+    public void undo(){
+
+        // Poslednja
+        if(lines.size() > 0) {
+            Figura lastFigura = lines.get(lines.size() - 1);
+
+            if(lastFigura instanceof Zatvorene){
+                ((Zatvorene) lastFigura).setFinished(true); // onaj koji  se prebacuje na stack zavrsava se
+            }
+
+            // Resetujemo alate za koje radimo undo
+            if(WorkPanel.selectedTool instanceof CrtanjeZatvorenih)
+                ((CrtanjeZatvorenih) WorkPanel.selectedTool).resetTool();
+            if(WorkPanel.selectedTool instanceof CrtanjeIzlomljenih)
+                ((CrtanjeIzlomljenih)WorkPanel.selectedTool).resetTool();
+
+            undoFigures.push(lastFigura);
+
+            // Uklanjamo je
+            lines.remove(lines.size() - 1);
+
+        }
+
+
+    }
+
+    public void redo(){
+        // Ako nije prazan
+        if(!undoFigures.empty()){
+            // Popujemo
+            Figura redoFigure = undoFigures.pop();
+            // Dodajemo novu
+            addFigure(redoFigure);
+
+
+        }
+
     }
 
 }

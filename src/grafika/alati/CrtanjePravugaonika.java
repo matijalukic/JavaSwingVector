@@ -50,4 +50,5 @@ public class CrtanjePravugaonika extends Alat {
         RadniProzor.rightLabel.setText(rightLabelTxt.toString());
 
     }
+
 }

@@ -143,8 +143,28 @@ public class RadniProzor extends JFrame {
         file.add(quit);
 
 
+
+
         // Help menu
+
         help = new JMenu("Help");
+
+        // Undo i  redo
+        JMenuItem undo = new JMenuItem("Undo");
+        JMenuItem redo = new JMenuItem("Redo");
+
+        undo.addActionListener(e -> {
+            WorkPanel.selectedTool.undo();
+            workPanel.repaint();
+        });
+        redo.addActionListener(e -> {
+            WorkPanel.selectedTool.redo();
+            workPanel.repaint();
+        });
+        help.add(undo);
+        help.add(redo);
+        help.addSeparator();
+
 
         about = new JMenuItem("About");
         about.addActionListener((e)->{
@@ -153,6 +173,8 @@ public class RadniProzor extends JFrame {
         help.add(about);
 
         menuBar.add(help);
+
+
 
 
         setJMenuBar(menuBar);
