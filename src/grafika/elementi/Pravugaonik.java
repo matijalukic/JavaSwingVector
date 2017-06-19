@@ -1,6 +1,7 @@
 package grafika.elementi;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by Matija on 16 Jun 17.
@@ -14,6 +15,24 @@ public class Pravugaonik extends Figura {
         super.startPoint = startPoint;
         this.endPoint = endPoint;
     }
+
+    public Pravugaonik(ArrayList<Point> points, int thick, Color color){
+        super(thick, color);
+
+        if(points != null) {
+            this.startPoint = points.get(0);
+            this.endPoint = points.get(1);
+        }
+    }
+
+    @Override
+    public void setPoints(ArrayList<Point> newPoints){ // Postavi nove tacke
+        if (newPoints != null) {
+            this.startPoint = newPoints.get(0);
+            this.endPoint = newPoints.get(1);
+        }
+    }
+
 
     @Override
     public void iscrtaj(Graphics2D g) {
@@ -71,5 +90,16 @@ public class Pravugaonik extends Figura {
         endPoint = newEnd;
     }
 
+
+    @Override
+    public String saveFormat(){
+        StringBuffer retString = new StringBuffer();
+
+        retString.append(super.saveFormat());
+
+        retString.append(startPoint.x).append(",").append(startPoint.y).append(";"); // prva tacka
+        retString.append(endPoint.x).append(",").append(endPoint.y).append(";"); // druga tacka
+        return retString.toString();
+    }
 
 }

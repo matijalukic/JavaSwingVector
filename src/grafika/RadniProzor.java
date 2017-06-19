@@ -5,6 +5,8 @@ import grafika.elementi.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -14,7 +16,7 @@ public class RadniProzor extends JFrame {
 
     private JMenuBar menuBar;
     private JMenu file, help;
-    private JMenuItem newFile, save, saveAs, closeThis, quit, about;
+    private JMenuItem newFile, save, load, closeThis, quit, about;
 
     // Toolbar elements
     private JPanel toolbar = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -89,16 +91,44 @@ public class RadniProzor extends JFrame {
 
         // Novi fajl
         newFile = new JMenuItem("New Drawing");
+        newFile.addActionListener(e -> {
+            WorkPanel.drawing.deleteAll();
+            workPanel.clear();
+            workPanel.repaint();
+        });
         file.add(newFile);
         file.addSeparator();
 
         // Save - zapamti
         save = new JMenuItem("Save");
+        // Zapmti
+        save.addActionListener((e) -> {
+            // file chooser
+            JFileChooser saveFileDialog = new JFileChooser();
+
+            if(saveFileDialog.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+                File fileTOSave = saveFileDialog.getSelectedFile();
+
+                WorkPanel.drawing.saveFile(fileTOSave);
+
+
+            }
+        });
         file.add(save);
 
         // Save as
-        saveAs = new JMenuItem("Save As");
-        file.add(saveAs);
+        load = new JMenuItem("Load");
+        load.addActionListener((e)->{
+            JFileChooser loadFileDialog = new JFileChooser();
+
+            if(loadFileDialog.showOpenDialog(this) == JFileChooser.APPROVE_OPTION){
+                File fileToLoad = loadFileDialog.getSelectedFile();
+
+                WorkPanel.drawing.loadFile(fileToLoad);
+                workPanel.repaint();
+            }
+        });
+        file.add(load);
         file.addSeparator();
 
         // Close this
@@ -107,6 +137,9 @@ public class RadniProzor extends JFrame {
 
         // Quit
         quit = new JMenuItem("Quit");
+        quit.addActionListener((e)->{
+            dispose();
+        });
         file.add(quit);
 
 

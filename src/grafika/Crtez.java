@@ -3,13 +3,35 @@ package grafika;
 import grafika.elementi.*;
 
 import java.awt.*;
+import java.io.*;
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Matija on 12 Jun 17.
  */
 public class Crtez {
     private ArrayList<Figura> lines;
+    private BufferedWriter writeToFile;
+    private BufferedReader loadToFile;
+
+    private final static Pattern lineFormat = Pattern.compile("([^\\(]+)\\(([\\-0-9]+),([\\-0-9]+)\\):((([\\-0-9]+),([\\-0-9]+);){2,})");
+    private final static Pattern pointFormat = Pattern.compile("([\\-0-9]+),([\\-0-9]+)");
+
+
+    public static Map<String, Figura> mapTypes = new HashMap<>();
+
+    static{
+        // Svi tipovi
+        mapTypes.put("grafika.elementi.Duz", new Duz(null, 1, Color.BLACK));
+        mapTypes.put("grafika.elementi.Linije", new Linije(null, 1, Color.BLACK));
+        mapTypes.put("grafika.elementi.Pravugaonik", new Pravugaonik(null, 1, Color.BLACK));
+        mapTypes.put("grafika.elementi.Zatvorene", new Zatvorene(null, 1, Color.BLACK));
+    }
 
     public Crtez(Figura... figure){
         lines = new ArrayList<>();
@@ -19,6 +41,27 @@ public class Crtez {
         }
 
     }
+    // Zapamti u fajl
+    public void saveFile(File toFile){
+        try {
+            writeToFile = new BufferedWriter(new FileWriter(toFile));
+
+            for (Figura figura : lines) {
+                writeToFile.write(figura.saveFormat());
+                writeToFile.write("\r\n");
+            }
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                writeToFile.close();
+            }
+            catch (IOException ex){}
+        }
+    }
+
     // Dodavanje elementi
     public void addFigure(Figura newFigure){
         lines.add(newFigure);
@@ -41,6 +84,7 @@ public class Crtez {
         return null;
     }
 
+    // Paint svih figura
     public void paintAll(Graphics g){
         Graphics2D graph =  (Graphics2D)g;
         for(Figura toPaint : lines){
@@ -48,6 +92,7 @@ public class Crtez {
         }
     }
 
+    // Delete jedne figure
     public void deleteFigura(Figura toDelete){
         int indexFigure = lines.size() - 1;
 
@@ -61,5 +106,86 @@ public class Crtez {
 
     }
 
+    // Load file-a
+    public void loadFile(File fileToLoad){
+        deleteAll(); // Brisemo sve prethodne
+
+        int failedReads = 0, reads = 0;
+
+        try {
+            loadToFile = new BufferedReader(new FileReader(fileToLoad));
+
+
+            // citamo sve linije
+            String line;
+
+            while((line = loadToFile.readLine()) != null){
+                Matcher lineMatcher = lineFormat.matcher(line);
+
+                if(lineMatcher.matches()){
+
+                    String className = lineMatcher.group(1);
+
+                    int lineThick = Integer.parseInt(lineMatcher.group(2));
+                    Color lineColor = new Color(Integer.parseInt(lineMatcher.group(3)));
+
+                    String tacke = lineMatcher.group(4);
+
+                    Matcher pointMatcher = pointFormat.matcher(tacke);
+                    System.out.println(tacke);
+
+                    ArrayList<Point> pointsForFigura = new ArrayList<>();
+
+                    while(pointMatcher.find()){ // Za svaku tacku
+                        int x = Integer.parseInt(pointMatcher.group(1));
+                        int y = Integer.parseInt(pointMatcher.group(2));
+                        pointsForFigura.add(new Point(x,y)); // Ubacujemo u listu tacaka
+                    }
+
+                    Figura newFigure;
+                    switch(className){
+                        default:
+                        case "grafika.elementi.Duz":
+                            newFigure = new Duz(pointsForFigura, lineThick,lineColor);
+                            break;
+                        case "grafika.elementi.Pravugaonik":
+                            newFigure = new Pravugaonik(pointsForFigura, lineThick, lineColor);
+                            break;
+                        case "grafika.elementi.Linije":
+                            newFigure = new Linije(pointsForFigura, lineThick, lineColor);
+                            break;
+                        case "grafika.elementi.Zatvorene":
+                            newFigure = new Zatvorene(pointsForFigura, lineThick, lineColor);
+                            break;
+                    }
+
+                    // Ubaci novu figuru
+                    addFigure(newFigure);
+
+
+
+                }
+                else
+                    failedReads++;
+
+                reads++; // povecavamo broj
+            }
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                loadToFile.close();
+            }
+            catch (IOException ex){}
+        }
+    }
+
+    // Obrisi sve
+    public void deleteAll(){
+        lines.clear();
+    }
 
 }

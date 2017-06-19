@@ -1,6 +1,8 @@
 package grafika.elementi;
 
 import java.awt.*;
+import java.util.*;
+
 /**
  * Created by Matija on 12 Jun 17.
  */
@@ -13,6 +15,23 @@ public class Duz extends Figura {
 
         this.startPoint = startPoint;
         this.endPoint = endPoint;
+    }
+
+    public Duz(ArrayList<Point> points, int thick, Color color) {
+        super(thick, color);
+
+        if (points != null) {
+            this.startPoint = points.get(0);
+            this.endPoint = points.get(1);
+        }
+    }
+
+    @Override
+    public void setPoints(ArrayList<Point> newPoints){ // Postavi nove tacke
+        if (newPoints != null) {
+            this.startPoint = newPoints.get(0);
+            this.endPoint = newPoints.get(1);
+        }
     }
 
 
@@ -37,18 +56,28 @@ public class Duz extends Figura {
     // Da li je selektovana
     @Override
     public boolean selected(Point coord){
-        double A, B = 1, C, k, d;
+        double A, B = 1, C, k, d = Integer.MAX_VALUE;
 
-        k = (startPoint.getY() - endPoint.getY()) / (startPoint.getX() - endPoint.getX());
-        A = - k;
+        if(startPoint.getX() != endPoint.getX()) { // ako nije uspravna
+            k = (startPoint.getY() - endPoint.getY()) / (startPoint.getX() - endPoint.getX());
+            A = -k;
 
-        C = k * endPoint.getX() - endPoint.getY();
+            C = k * endPoint.getX() - endPoint.getY();
 
-        d = (A*coord.getX() + B*coord.getY() + C) / Math.sqrt(A*A + B*B);
+            d = (A * coord.getX() + B * coord.getY() + C) / Math.sqrt(A * A + B * B);
 
-        if(Math.abs(d) < catchCoef*lineThick) {
+
+        }
+        else{ // Ako je uspravna
+            if( (endPoint.y <= coord.y && startPoint.y >= coord.y) || (endPoint.y >= coord.y && startPoint.y <= coord.y)){
+                d =  coord.x - startPoint.x;// razlika izmelju x koordinata
+            }
+        }
+
+        if (Math.abs(d) < catchCoef * lineThick) {
             return true;
         }
+
         return false;
     }
 
@@ -71,6 +100,17 @@ public class Duz extends Figura {
     // Postavljanje novog kraja
     public void setNewEnd(Point newEnd){
         endPoint = newEnd;
+    }
+
+    @Override
+    public String saveFormat(){
+        StringBuffer retString = new StringBuffer();
+
+        retString.append(super.saveFormat());
+
+        retString.append(startPoint.x).append(",").append(startPoint.y).append(";"); // prva tacka
+        retString.append(endPoint.x).append(",").append(endPoint.y).append(";"); // druga tacka
+        return retString.toString();
     }
 
     @Override

@@ -13,7 +13,14 @@ public class Linije extends Figura {
         super(thick, color);
 
         this.tacke = tacke;
+    }
 
+    @Override
+    public void setPoints(ArrayList<Point> newPoints){ // Postavi nove tacke
+        if (newPoints != null) {
+            this.startPoint = newPoints.get(0);
+            tacke = newPoints;
+        }
     }
 
     // Dodaj tacku
@@ -93,6 +100,22 @@ public class Linije extends Figura {
         }
         startPoint = pointNewStart;
         tacke.set(0, startPoint);
+
+    }
+
+    @Override
+    public String saveFormat(){
+
+        StringBuffer retString = new StringBuffer();
+
+        retString.append(super.saveFormat());
+
+
+        for(Point tacka: tacke){
+            retString.append(tacka.x).append(",").append(tacka.y).append(";"); // prva tacka
+        }
+        return retString.toString();
+
 
     }
 

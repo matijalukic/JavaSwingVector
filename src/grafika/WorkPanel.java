@@ -73,4 +73,10 @@ public class WorkPanel extends JPanel {
         if(drawing != null)
             drawing.paintAll(g);
     }
+
+    public void clear(){
+        Graphics g = getGraphics();
+
+        g.clearRect(0,0, getWidth(), getHeight());
+    }
 }
