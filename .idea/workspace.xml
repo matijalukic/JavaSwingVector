@@ -10,30 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e4b8261-21a9-4cd1-8b9a-2cc253ed166b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/POOPIspit_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Alati/Pomeranje.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Alati/Pomeranje.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Crtez.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/Crtez.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/RadniProzor.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/Grafika/RadniProzor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/grafika/alati/CrtanjeIzlomljenih.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/grafika/alati/CrtanjeIzlomljenih.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/grafika/alati/CrtanjeZatvorenih.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/grafika/alati/CrtanjeZatvorenih.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/grafika/elementi/Linije.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/grafika/elementi/Linije.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/POOPIspit/grafika/elementi/Zatvorene.class" afterPath="$PROJECT_DIR$/out/production/POOPIspit/grafika/elementi/Zatvorene.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/Crtez.java" afterPath="$PROJECT_DIR$/src/grafika/Crtez.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/RadniProzor.java" afterPath="$PROJECT_DIR$/src/grafika/RadniProzor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/Alat.java" afterPath="$PROJECT_DIR$/src/grafika/alati/Alat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/Brisanje.java" afterPath="$PROJECT_DIR$/src/grafika/alati/Brisanje.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/CrtanjeIzlomljenih.java" afterPath="$PROJECT_DIR$/src/grafika/alati/CrtanjeIzlomljenih.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/CrtanjeLinija.java" afterPath="$PROJECT_DIR$/src/grafika/alati/CrtanjeLinija.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/CrtanjePravugaonika.java" afterPath="$PROJECT_DIR$/src/grafika/alati/CrtanjePravugaonika.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/CrtanjeZatvorenih.java" afterPath="$PROJECT_DIR$/src/grafika/alati/CrtanjeZatvorenih.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/alati/Pomeranje.java" afterPath="$PROJECT_DIR$/src/grafika/alati/Pomeranje.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/elementi/Duz.java" afterPath="$PROJECT_DIR$/src/grafika/elementi/Duz.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/elementi/Figura.java" afterPath="$PROJECT_DIR$/src/grafika/elementi/Figura.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/elementi/Linije.java" afterPath="$PROJECT_DIR$/src/grafika/elementi/Linije.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/elementi/Pravugaonik.java" afterPath="$PROJECT_DIR$/src/grafika/elementi/Pravugaonik.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/grafika/elementi/Zatvorene.java" afterPath="$PROJECT_DIR$/src/grafika/elementi/Zatvorene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/grafika/elementi/Linije.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#620#621#0" expanded="true" />
@@ -63,27 +41,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrtanjeIzlomljenih.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrtanjeIzlomljenih.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjeIzlomljenih.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-              <folding>
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="354">
+              <caret line="68" column="54" lean-forward="false" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pravugaonik.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grafika/elementi/Pravugaonik.java">
+      <file leaf-file-name="RadniProzor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/grafika/RadniProzor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="354">
+              <caret line="133" column="21" lean-forward="true" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,8 +64,8 @@
       <file leaf-file-name="Crtez.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/Crtez.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="103" column="29" lean-forward="true" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+            <state relative-caret-position="1513">
+              <caret line="103" column="29" lean-forward="false" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,8 +76,8 @@
       <file leaf-file-name="Pomeranje.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/Pomeranje.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-870">
-              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +88,8 @@
       <file leaf-file-name="CrtanjeLinija.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjeLinija.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="306">
+              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -125,8 +98,8 @@
       <file leaf-file-name="CrtanjePravugaonika.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjePravugaonika.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,8 +108,8 @@
       <file leaf-file-name="CrtanjeZatvorenih.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjeZatvorenih.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+            <state relative-caret-position="697">
+              <caret line="50" column="40" lean-forward="false" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -145,8 +118,8 @@
       <file leaf-file-name="Brisanje.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/Brisanje.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="493">
+              <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,8 +130,8 @@
       <file leaf-file-name="Alat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grafika/alati/Alat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#563#564#0" expanded="true" />
@@ -216,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/grafika/ColorChooserButton.java" />
         <option value="$PROJECT_DIR$/src/grafika/WorkPanel.java" />
         <option value="$PROJECT_DIR$/src/grafika/elementi/Zatvorene.java" />
-        <option value="$PROJECT_DIR$/src/grafika/RadniProzor.java" />
         <option value="$PROJECT_DIR$/src/grafika/elementi/Figura.java" />
         <option value="$PROJECT_DIR$/src/grafika/elementi/Duz.java" />
         <option value="$PROJECT_DIR$/src/grafika/elementi/Pravugaonik.java" />
@@ -229,6 +201,7 @@
         <option value="$PROJECT_DIR$/src/grafika/alati/CrtanjePravugaonika.java" />
         <option value="$PROJECT_DIR$/src/grafika/alati/CrtanjeZatvorenih.java" />
         <option value="$PROJECT_DIR$/src/grafika/alati/CrtanjeIzlomljenih.java" />
+        <option value="$PROJECT_DIR$/src/grafika/RadniProzor.java" />
       </list>
     </option>
   </component>
@@ -257,6 +230,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,7 +322,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -604,7 +577,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -614,10 +587,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26321355" sideWeight="0.53020835" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26321355" sideWeight="0.534375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26321355" sideWeight="0.465625" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26321355" sideWeight="0.46979168" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -627,8 +600,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.487315" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -679,9 +652,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -743,9 +714,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -807,9 +776,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -871,9 +838,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,9 +900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,9 +924,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,7 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="537" column="0" lean-forward="false" selection-start-line="537" selection-start-column="0" selection-end-line="537" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,14 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grafika/RadniProzor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="160" column="34" lean-forward="false" selection-start-line="160" selection-start-column="34" selection-end-line="160" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1080,8 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/elementi/Pravugaonik.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="697">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1091,7 +1043,7 @@
     <entry file="file://$PROJECT_DIR$/src/grafika/elementi/Linije.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#620#621#0" expanded="true" />
@@ -1102,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/Brisanje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="493">
+          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1112,8 +1064,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/Crtez.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="103" column="29" lean-forward="true" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+        <state relative-caret-position="1513">
+          <caret line="103" column="29" lean-forward="false" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1122,8 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/Alat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#563#564#0" expanded="true" />
@@ -1134,8 +1086,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/Pomeranje.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1144,36 +1096,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjePravugaonika.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjeZatvorenih.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="50" column="40" lean-forward="true" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        <state relative-caret-position="697">
+          <caret line="50" column="40" lean-forward="false" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjeLinija.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="306">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grafika/alati/CrtanjeIzlomljenih.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-          <folding>
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="354">
+          <caret line="68" column="54" lean-forward="false" selection-start-line="68" selection-start-column="54" selection-end-line="68" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grafika/RadniProzor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="133" column="21" lean-forward="true" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

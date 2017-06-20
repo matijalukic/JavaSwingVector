@@ -133,6 +133,11 @@ public class RadniProzor extends JFrame {
 
         // Close this
         closeThis = new JMenuItem("Close This");
+        closeThis.addActionListener(e -> {
+            WorkPanel.drawing.deleteAll();
+            workPanel.clear();
+            workPanel.repaint();
+        });
         file.add(closeThis);
 
         // Quit
@@ -223,12 +228,6 @@ public class RadniProzor extends JFrame {
 
     private void makeCanvas(){
         Crtez novi = new Crtez();
-
-        Duz matija = new Duz(new Point(10,10), new Point(200,200), 3, Color.BLUE);
-        novi.addFigure(matija);
-
-        matija = new Duz(new Point(200,10), new Point(10, 200), 4, Color.RED);
-        novi.addFigure(matija);
 
         workPanel.openNewDrawing(novi);
 
